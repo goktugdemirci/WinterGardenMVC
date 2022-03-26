@@ -1,0 +1,94 @@
+﻿@model WinterGardenMVC.ViewModels.LoginViewModel
+@using WinterGardenMVC.Helpers
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="zxx">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/Assets/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="~/Assets/css/flaticon.css">
+
+    <link rel="stylesheet" href="~/Assets/css/meanmenu.min.css">
+
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+
+    <link rel="stylesheet" href="~/Assets/css/responsive.css">
+
+    <link rel="icon" type="image/png" href="~/Assets/img/favicon.png">
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+
+    <title>[    ] Kış Bahçesi Çözümleri</title>
+</head>
+<body>
+    <section class="user-area-style ptb-100">
+        <div class="container">
+            <div class="log-in-area">
+                <div class="section-title text-center">
+                    <h2>ADMIN PANEL</h2>
+                </div>
+                <div class="contact-form-action">
+                    @Html.ValidationSummary() 
+                    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new {enctype = "multipart/form-data"}))
+                    {
+
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Email or Username</label>
+                                        @Html.TextBoxFor(g => (g.Credential), new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        @Html.PasswordFor(g => g.Password, new { @type = "password", @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="login-action">
+                                        <span class="log-rem">
+                                            <input id="remember" type="checkbox">
+                                            <label for="remember">Remember me!</label>
+                                        </span>
+                                        <span class="forgot-login">
+                                            <a href="@Url.Action("RecoverPassword","Login")">Forgot your password?</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="default-btn" type="submit">
+                                        Giriş
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/toastr.js"></script>
+    @if (TempData["message"] != null)
+    {
+        ToastMessage tm = (ToastMessage)TempData["message"];
+        <script>
+            toastr["@tm.Type"]("@tm.Body", "@tm.Header")
+        </script>
+        tm = null;
+    }
+</body>
+</html>
+
