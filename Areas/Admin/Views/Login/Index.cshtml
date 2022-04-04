@@ -35,8 +35,8 @@
                     <h2>ADMIN PANEL</h2>
                 </div>
                 <div class="contact-form-action">
-                    @Html.ValidationSummary() 
-                    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new {enctype = "multipart/form-data"}))
+                    @Html.ValidationSummary()
+                    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
 
                         <form>
@@ -73,7 +73,6 @@
                             </div>
                         </form>
                     }
-
                 </div>
             </div>
         </div>

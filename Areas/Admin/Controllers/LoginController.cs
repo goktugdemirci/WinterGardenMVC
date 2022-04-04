@@ -45,7 +45,12 @@ namespace WinterGardenMVC.Areas.Admin.Controllers
                 string message = "";
                 foreach (ModelState item in ModelState.Values)
                 {
-                    message += item.Errors[0].ErrorMessage + "\n";
+                    if (item.Errors.Count!=0)
+                    {
+                        message += item.Errors[0].ErrorMessage + "\n";
+                    }
+                    
+                    
                 }
                 TempData["message"] = new ToastMessage()
                 {
