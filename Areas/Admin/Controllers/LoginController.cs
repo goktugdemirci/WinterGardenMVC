@@ -49,8 +49,6 @@ namespace WinterGardenMVC.Areas.Admin.Controllers
                     {
                         message += item.Errors[0].ErrorMessage + "\n";
                     }
-                    
-                    
                 }
                 TempData["message"] = new ToastMessage()
                 {
