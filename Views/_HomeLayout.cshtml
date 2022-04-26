@@ -2,12 +2,448 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="~/Assets/css/animate.min.css">
+    <link rel="stylesheet" href="~/Assets/css/boxicons.min.css">
+    <link rel="stylesheet" href="~/Assets/css/flaticon.css">
+    <link rel="stylesheet" href="~/Assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="~/Assets/css/nice-select.min.css">
+    <link rel="stylesheet" href="~/Assets/css/odometer.min.css">
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+    <link rel="stylesheet" href="~/Assets/css/responsive.css">
+    <link rel="icon" type="image/png" href="Assets/img/favicon.png">
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="dot-wrap">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+    @*<div class="modal-newsletter-area">
+        <div class="modal fade" id="exampleModal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-bs-dismiss="modal">
+                        <i class="bx bx-x"></i>
+                    </button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-5 p-0">
+                                <div class="newsletter-img">
+                                    <img src="assets/img/newsletter-img.jpg" alt="Image">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-sm-7 pl-0">
+                                <div class="modal-newsletter-wrap">
+                                    <h3>Subscribe to our newsletter</h3>
+                                    <p>Sign up for our mailing list to get the latest updates & offers.</p>
+                                    <form class="newsletter-form" data-toggle="validator">
+                                        <input type="email" class="form-control" placeholder="Enter email address"
+                                               name="EMAIL" required autocomplete="off">
+                                        <button class="default-btn" type="submit">
+                                            Subscribe Now
+                                        </button>
+                                        <div id="validator-newsletter-2" class="form-result"></div>
+                                        <div class="agree-label">
+                                            <input type="checkbox" id="chb1">
+                                            <label for="chb1">
+                                                Do not show this popup again
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <div class="navbar-area navbar-area-two">
+
+        <div class="mobile-nav">
+            <a href="index.html" class="logo">
+                <img src="~/Assets/img/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="main-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="~/Assets/img/logo.png" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    Anasayfa
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link">Home One</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index-2.html" class="nav-link">Home Two</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="index-3.html" class="nav-link active">Home Three</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Projeler
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="courses.html" class="nav-link">Courses</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="single-course.html" class="nav-link">Single Course</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Hakkımızda
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="about.html" class="nav-link">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="feedback.html" class="nav-link">Feedback</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Events
+                                            <i class='bx bx-chevron-right'></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="events.html" class="nav-link">Events</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="single-event.html" class="nav-link">Single Event</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="instructors.html" class="nav-link">Instructors</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            User
+                                            <i class='bx bx-chevron-right'></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="my-account.html" class="nav-link">My Account</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="log-in.html" class="nav-link">Log In</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="registration.html" class="nav-link">Registration</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="recover-password.html" class="nav-link">Recover Password</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="gallery.html" class="nav-link">Gallery</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="faq.html" class="nav-link">FAQ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="terms-conditions.html" class="nav-link">Terms & Conditions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="404.html" class="nav-link">404 Error Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Ürünler
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="shop.html" class="nav-link">Shop</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="cart.html" class="nav-link">Cart</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="checkout.html" class="nav-link">Checkout</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="single-product.html" class="nav-link">Single Product</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="wishlist.html" class="nav-link">Wishlist</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Bilgiler
+                                    <i class="bx bx-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="blog-column-one.html" class="nav-link">Blog Column One</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog-column-two.html" class="nav-link">Blog Column Two</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog-column-three.html" class="nav-link">Blog Column Three</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog-left-sidebar.html" class="nav-link">Blog Left Sidebar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="single-blog.html" class="nav-link">Single Blog</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Bize Ulaşın</a>
+                            </li>
+                        </ul>
+
+                        <div class="others-option">
+                            <div class="option-item">
+                                <i class="search-btn bx bx-search"></i>
+                                <i class="close-btn bx bx-x"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <button class="search-button" type="submit">
+                                                <i class="bx bx-search"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-icon">
+                                <a href="cart.html">
+                                    <i class="flaticon-shopping-cart"></i>
+                                    <span>0</span>
+                                </a>
+                            </div>
+                            <div class="register">
+                                <a href="my-account.html" class="default-btn">
+                                    Giriş / Kaydol
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-option justify-content-center d-flex align-items-center">
+                            <div class="option-item">
+                                <i class="search-btn bx bx-search"></i>
+                                <i class="close-btn bx bx-x"></i>
+                                <div class="search-overlay search-popup">
+                                    <div class='search-box'>
+                                        <form class="search-form">
+                                            <input class="search-input" name="search" placeholder="Search" type="text">
+                                            <button class="search-button" type="submit">
+                                                <i class="bx bx-search"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="cart-icon">
+                                <a href="cart.html">
+                                    <i class="flaticon-shopping-cart"></i>
+                                    <span>0</span>
+                                </a>
+                            </div>*@
+                            @*<div class="register">
+                                <a href="my-account.html" class="default-btn">
+                                    Login / Register
+                                </a>
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <div>
         @RenderBody()
     </div>
+    <footer class="footer-top-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3>Find Us</h3>
+                        <ul class="address">
+                            <li class="location">
+                                <i class="bx bxs-location-plus"></i>
+                                6890 Blvd, The Bronx, NY 1058 New York, USA
+                            </li>
+                            <li>
+                                <i class="bx bxs-envelope"></i>
+                                <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#3a525f5656557a5f5e4f555414595557">
+                                    <span class="__cf_email__"
+                                          data-cfemail="1b737e7777745b7e7f6e747535787476">[email&#160;protected]</span>
+                                </a>
+                                <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#e69693848a8f85a68382938988c885898b">
+                                    <span class="__cf_email__"
+                                          data-cfemail="bcccc9ded0d5dffcd9d8c9d3d292dfd3d1">[email&#160;protected]</span>
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bx bxs-phone-call"></i>
+                                <a href="tel:+1(514)312-5678">+1 (514) 312-5678</a>
+                                <a href="tel:+1(514)312-6688">+1 (514) 312-6688</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3>Useful links</h3>
+                        <ul class="link">
+                            <li>
+                                <a href="courses.html">All Courses</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Help (FAQ)</a>
+                            </li>
+                            <li>
+                                <a href="terms-conditions.html">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3>Top online courses</h3>
+                        <ul class="link">
+                            <li>
+                                <a href="#">AI for everyone</a>
+                            </li>
+                            <li>
+                                <a href="#">Networks and deep learning</a>
+                            </li>
+                            <li>
+                                <a href="#">Learning with python</a>
+                            </li>
+                            <li>
+                                <a href="#">Financial markets</a>
+                            </li>
+                            <li>
+                                <a href="#">Speak English professionally</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3>Popular subjects</h3>
+                        <ul class="link">
+                            <li>
+                                <a href="#">Data science</a>
+                            </li>
+                            <li>
+                                <a href="#">Computer science</a>
+                            </li>
+                            <li>
+                                <a href="#">Business and Management</a>
+                            </li>
+                            <li>
+                                <a href="#">Business and Management</a>
+                            </li>
+                            <li>
+                                <a href="#">Nature & Environment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-bottom-area">
+        <div class="container">
+            <div class="copyright-wrap">
+                <p>
+                    Copyright <i class="bx bx-copyright"></i>2021 Eduon. Designed By
+                    <a href="https://hibootstrap.com/" target="blank">HiBootstrap.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="go-top">
+        <i class='bx bx-chevrons-up'></i>
+        <i class='bx bx-chevrons-up'></i>
+    </div>
+    
+    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="~/Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Assets/js/meanmenu.min.js"></script>
+    <script src="~/Assets/js/owl.carousel.min.js"></script>
+    <script src="~/Assets/js/wow.min.js"></script>
+    <script src="~/Assets/js/nice-select.min.js"></script>
+    <script src="~/Assets/js/magnific-popup.min.js"></script>
+    <script src="~/Assets/js/jarallax.min.js"></script>
+    <script src="~/Assets/js/appear.min.js"></script>
+    <script src="~/Assets/js/odometer.min.js"></script>
+    <script src="~/Assets/js/form-validator.min.js"></script>
+    <script src="~/Assets/js/contact-form-script.js"></script>
+    <script src="~/Assets/js/ajaxchimp.min.js"></script>
+    <script src="~/Assets/js/custom.js"></script>
 </body>
 </html>

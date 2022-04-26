@@ -6,6 +6,7 @@
     --body-color: #616161;
     --heading-color: #111111;
     --white-color: #ffffff;
+    --gray-color: #DCDEE5;
     --black-color: #000000;
     --font-size: 16px;
     --transition: all ease .5s;
@@ -993,7 +994,7 @@ textarea.form-control {
         }
 
 .banner-area-three {
-    background-image: url(../img/banner-img/banner-bg-3.jpg);
+    background-image: url(../img/banner-img/2.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1012,7 +1013,7 @@ textarea.form-control {
     }
 
     .banner-area-three .enroll-wrap {
-        background-color: var(--white-color);
+        background-color: var(--gray-color);
         max-width: 500px;
         margin-left: auto;
         margin-bottom: 0;
