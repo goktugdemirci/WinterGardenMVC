@@ -175,3 +175,4 @@ C:\Users\GktgD\Documents\GitHub\WinterGardenMVC\obj\Debug\WinterGardenMVC.csproj
 C:\Users\GktgD\Documents\GitHub\WinterGardenMVC\obj\Debug\WinterGardenMVC.csproj.CopyComplete
 C:\Users\GktgD\Documents\GitHub\WinterGardenMVC\obj\Debug\WinterGardenMVC.dll
 C:\Users\GktgD\Documents\GitHub\WinterGardenMVC\obj\Debug\WinterGardenMVC.pdb
+C:\Users\gkdmtgrc\Documents\GitHub\WinterGardenMVC\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
